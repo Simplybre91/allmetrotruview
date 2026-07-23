@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Metro TrueView | Window Cleaning — Isanti &amp; Anoka County, MN</title>
+<meta name="description" content="Professional exterior window cleaning, gutter cleaning, pressure washing and roof soft washing serving Isanti and Anoka County, Minnesota.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Brand Colors extracted from Logo */
+    --ink: #0d2b4a;       /* Navy Blue */
+    --ink-soft: #1a426e;  
+    --teal: #0070bc;      /* Bright Blue */
+    --teal-deep: #005691; 
+    --gold: #ff8c00;      /* Orange */
+    
+    /* Backgrounds & Text */
+    --paper: #f8f9fa;
+    --paper-deep: #e9ecef;
+    --white: #ffffff;
+    --text: #333333;
+    --text-soft: #555555;
+
+    --display: 'Fraunces', serif;
+    --body: 'Public Sans', sans-serif;
+    --mono: 'IBM Plex Mono', monospace;
+
+    --maxw: 1180px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:var(--body);
+    color:var(--text);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px;}
+
+  h1,h2,h3{font-family:var(--display); margin:0; font-weight:600; color:var(--ink);}
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--teal-deep);
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:1px;
+    background:var(--gold);
+    display:inline-block;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(255,255,255,0.95);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(13,43,74,0.08);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:12px 28px;
+    max-width:var(--maxw); margin:0 auto;
+  }
+  .brand{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--display);
+    font-weight:700; font-size:22px;
+    color:var(--ink);
+    text-decoration:none;
+  }
+  .brand-mark {
+    width: 34px; height: 34px; border-radius: 8px;
+    background: linear-gradient(160deg, var(--teal), var(--teal-deep));
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .brand-mark svg {
+    width: 18px; height: 18px;
+  }
+  .nav-links{
+    display:flex; gap:30px; list-style:none; margin:0; padding:0;
+    font-size:14.5px; font-weight:600;
+  }
+  .nav-links a{
+    text-decoration:none; color:var(--ink-soft);
+    padding-bottom:2px; border-bottom:1px solid transparent;
+    transition:border-color .2s ease, color .2s ease;
+  }
+  .nav-links a:hover{color:var(--teal-deep); border-color:var(--gold);}
+  .nav-cta{
+    display:flex; align-items:center; gap:16px;
+  }
+  .call-pill{
+    font-family:var(--mono);
+    font-weight:600;
+    font-size:14px;
+    text-decoration:none;
+    color:var(--white);
+    background:var(--ink);
+    padding:10px 18px;
+    border-radius:999px;
+    display:inline-flex; align-items:center; gap:8px;
+    transition:transform .2s ease, background .2s ease;
+  }
+  .call-pill:hover{background:var(--teal-deep); transform:translateY(-1px);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:76px 0 40px;
+    position:relative;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:56px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(36px, 4.6vw, 58px);
+    line-height:1.06;
+    letter-spacing:-0.01em;
+    margin:18px 0 20px;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--teal-deep);
+    font-weight:500;
+  }
+  .hero p.lede{
+    font-size:17.5px;
+    line-height:1.65;
+    color:var(--text-soft);
+    max-width:480px;
+    margin-bottom:30px;
+  }
+  .hero-actions{
+    display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+    margin-bottom:38px;
+  }
+  .btn-primary{
+    background:var(--gold);
+    color:var(--white);
+    text-decoration:none;
+    font-weight:700;
+    font-size:14px;
+    padding:14px 24px;
+    border-radius:8px;
+    box-shadow:0 6px 16px rgba(255,140,0,0.3);
+    transition:transform .2s ease, box-shadow .2s ease;
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 20px rgba(255,140,0,0.4);}
+  .hero-trust{
+    display:flex; gap:28px; flex-wrap:wrap;
+  }
+  .hero-trust div{
+    font-size:13px; color:var(--text-soft); font-weight:600;
+    display:flex; align-items:center; gap:8px;
+  }
+  .hero-trust svg{width:16px; height:16px; color:var(--teal-deep); flex-shrink:0;}
+
+  /* ---------- Contact Form ---------- */
+  .contact-container {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 36px;
+    box-shadow: 0 20px 40px -10px rgba(13,43,74,0.15);
+    border: 1px solid rgba(13,43,74,0.08);
+  }
+  .contact-container h3 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: var(--ink);
+  }
+  .form-group {
+    margin-bottom: 18px;
+  }
+  .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid rgba(13,43,74,0.2);
+    border-radius: 8px;
+    font-family: var(--body);
+    font-size: 15px;
+    background: var(--paper);
+  }
+  .form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+    background: var(--white);
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  .submit-btn {
+    background: var(--teal);
+    color: var(--white);
+    border: none;
+    padding: 16px 32px;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .submit-btn:hover {
+    background: var(--teal-deep);
+    transform: translateY(-2px);
+  }
+
+  /* ---------- Trust bar ---------- */
+  .trustbar{
+    background:var(--ink);
+    color:var(--white);
+    padding:22px 0;
+  }
+  .trustbar .wrap{
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:16px;
+  }
+  .trustbar-item{
+    display:flex; align-items:center; gap:10px;
+    font-size:13.5px; font-weight:600;
+  }
+  .trustbar-item svg{width:17px; height:17px; color:var(--gold); flex-shrink:0;}
+
+  /* ---------- Sections generic ---------- */
+  section{padding:96px 0;}
+  .section-head{
+    max-width:600px;
+    margin-bottom:52px;
+  }
+  .section-head h2{
+    font-size:clamp(28px, 3.2vw, 40px);
+    margin-top:14px;
+    line-height:1.15;
+  }
+  .section-head p{
+    color:var(--text-soft);
+    font-size:16px;
+    line-height:1.6;
+    margin-top:14px;
+  }
+
+  /* ---------- Services ---------- */
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:20px;
+  }
+  .service-card{
+    background:var(--white);
+    border:1px solid rgba(13,43,74,0.08);
+    border-radius:16px;
+    padding:30px 26px;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .service-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 40px -18px rgba(13,43,74,0.15);
+    border-color:rgba(0,112,188,0.3);
+  }
+  .service-icon{
+    width:44px; height:44px;
+    border-radius:11px;
+    background:var(--paper-deep);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:18px;
+  }
+  .service-icon svg{width:22px; height:22px; color:var(--teal-deep);}
+  .service-card h3{
+    font-size:19px; margin-bottom:10px; font-weight:600;
+  }
+  .service-card p{
+    font-size:14.5px; color:var(--text-soft); line-height:1.6; margin:0;
+  }
+
+  /* ---------- Process ---------- */
+  .process{
+    background:var(--paper-deep);
+  }
+  .process-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:0;
+    position:relative;
+  }
+  .process-step{
+    padding:0 30px;
+    position:relative;
+  }
+  .process-step:not(:last-child)::after{
+    content:"";
+    position:absolute; top:24px; right:-10px;
+    width:20px; height:1px;
+    background:repeating-linear-gradient(to right, var(--teal-deep) 0 6px, transparent 6px 11px);
+  }
+  .process-num{
+    font-family:var(--mono);
+    font-size:13px; font-weight:600;
+    color:var(--gold);
+    display:block;
+    margin-bottom:14px;
+  }
+  .process-step h3{font-size:19px; margin-bottom:10px;}
+  .process-step p{font-size:14.5px; color:var(--text-soft); line-height:1.6; margin:0;}
+
+  /* ---------- Area ---------- */
+  .area-layout{
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:60px;
+    align-items:center;
+  }
+  .chip-cloud{
+    display:flex; flex-wrap:wrap; gap:10px;
+  }
+  .chip{
+    font-family:var(--mono);
+    font-size:13px; font-weight:600;
+    background:var(--white);
+    border:1px solid rgba(13,43,74,0.12);
+    color:var(--ink-soft);
+    padding:9px 16px;
+    border-radius:999px;
+  }
+  .chip.home{
+    background:var(--ink);
+    color:var(--white);
+    border-color:var(--ink);
+  }
+  .area-visual{
+    position:relative;
+    aspect-ratio:1/1;
+    max-width:420px;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background:var(--ink);
+    color:rgba(255,255,255,0.7);
+    padding:36px 0 30px;
+  }
+  .footer-row{
+    display:flex; justify-content:space-between; align-items:center;
+    flex-wrap:wrap; gap:14px;
+    font-size:13px;
+  }
+  .footer-row .brand{color:var(--white); font-weight: bold; font-size: 16px;}
+  .footer-links{display:flex; gap:22px; list-style:none; padding:0; margin:0;}
+  .footer-links a{text-decoration:none; color:rgba(255,255,255,0.7);}
+  .footer-links a:hover{color:var(--gold);}
+
+  /* ---------- Sticky mobile call ---------- */
+  .sticky-call{
+    display:none;
+    position:fixed; bottom:0; left:0; right:0; z-index:60;
+    background:var(--ink);
+    padding:14px 20px;
+    text-align:center;
+  }
+  .sticky-call a{
+    color:var(--white); text-decoration:none;
+    font-weight:700; font-family:var(--mono); font-size:15px;
+    display:flex; align-items:center; justify-content:center; gap:10px;
+  }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px){
+    .hero-grid{grid-template-columns:1fr; gap:44px;}
+    .services-grid{grid-template-columns:repeat(2, 1fr);}
+    .process-grid{grid-template-columns:1fr; gap:36px;}
+    .process-step::after{display:none;}
+    .area-layout{grid-template-columns:1fr;}
+    .area-visual{max-width:320px; margin:0 auto;}
+    .nav-links{display:none;}
+    section{padding:70px 0;}
+    .sticky-call{display:block;}
+    body{padding-bottom:64px;}
+  }
+  @media (max-width: 560px){
+    .services-grid{grid-template-columns:1fr;}
+    .nav-cta .call-pill span.long{display:none;}
+    .footer-row{flex-direction:column; align-items:flex-start;}
+    .hero-actions { flex-direction: column; align-items: stretch; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a href="#top" class="brand">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="#FCFDFC" stroke-width="1.4"/><path d="M12 4v16M4 12h16" stroke="#FCFDFC" stroke-width="1.4"/></svg>
+      </span>
+      All Metro TrueView
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">How it works</a></li>
+      <li><a href="#area">Service area</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+17633029712" class="call-pill">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.78.6 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.45a2 2 0 0 1 2.11-.45c.85.28 1.73.48 2.63.6A2 2 0 0 1 22 16.92z"/></svg>
+        <span class="long">(763) 302-9712</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div style="margin-bottom: 24px;">
+          <img src="images/logo.png" alt="All Metro TrueView Logo" style="max-width: 240px; height: auto;">
+        </div>
+        <span class="eyebrow">Isanti &amp; Anoka County, MN</span>
+        <h1>A clean window isn't glass. It's <em>a clear view</em> of everything behind it.</h1>
+        <p class="lede">All Metro TrueView handles the exterior work homeowners put off — streaked windows, clogged gutters, grimy siding, mossy roofs — so your home looks the way you actually want it to look.</p>
+        
+        <div class="hero-actions">
+          <a href="tel:+16125633774" class="btn-primary" style="background: var(--teal);">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.78.6 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.45a2 2 0 0 1 2.11-.45c.85.28 1.73.48 2.63.6A2 2 0 0 1 22 16.92z"/></svg>
+            (612) 563-3774
+          </a>
+        </div>
+        
+        <div class="hero-trust">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Licensed &amp; insured</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Satisfaction guaranteed</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg> Locally owned</div>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div>
+        <div class="contact-container">
+          <h3>Get a free quote</h3>
+          <div>
+            <script type="text/javascript" src="https://www.jotform.com/jsform/262026009149048"></script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trustbar">
+    <div class="wrap">
+      <div class="trustbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21l2-7.5L2 9h7z"/></svg> 5-star rated by local homeowners</div>
+      <div class="trustbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg> Same-week scheduling</div>
+      <div class="trustbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12l6 6L20 6"/></svg> Free, no-pressure estimates</div>
+      <div class="trustbar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21l3-9 9-9 3 3-9 9-9 3z"/></svg> Fully equipped &amp; insured crew</div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What we do</span>
+        <h2>Every exterior surface that quietly wears a home down.</h2>
+        <p>Pick one service or bundle the whole exterior — we handle the parts of upkeep that are hardest to reach and easiest to ignore.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="12" x2="21" y2="12"></line><line x1="12" y1="3" x2="12" y2="21"></line></svg></div>
+          <h3>Exterior window cleaning</h3>
+          <p>Streak-free glass, frames, and sills — the difference shows the moment the sun hits them.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16.2A5 5 0 0 0 18 7h-1.26A8 8 0 1 0 4 15.25"></path><path d="M12 14v6"></path><path d="M8 16v4"></path><path d="M16 16v4"></path></svg></div>
+          <h3>Gutter cleaning</h3>
+          <p>Debris out, downspouts clear — the fastest way to prevent water damage before a Minnesota winter.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"></path><path d="M12 18v4"></path><path d="M4.93 4.93l2.83 2.83"></path><path d="M16.24 16.24l2.83 2.83"></path><path d="M2 12h4"></path><path d="M18 12h4"></path><path d="M4.93 19.07l2.83-2.83"></path><path d="M16.24 7.76l2.83-2.83"></path></svg></div>
+          <h3>Pressure washing</h3>
+          <p>Driveways, patios, siding, and walkways — years of grime lifted in an afternoon.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path></svg></div>
+          <h3>Roof soft washing</h3>
+          <p>Low-pressure treatment that clears moss and streaks without stressing shingles.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path><path d="M9 3v18"></path><path d="M15 3v18"></path></svg></div>
+          <h3>Screens, tracks &amp; sills</h3>
+          <p>The small details that get skipped elsewhere — cleaned and reset every visit.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><path d="M3.27 6.96L12 12.01l8.73-5.05"></path><path d="M12 22.08V12"></path></svg></div>
+          <h3>Custom exterior packages</h3>
+          <p>Not sure what you need? Tell us the problem areas — we'll build a plan around them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Three steps, no surprises.</h2>
+      </div>
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="process-num">01</span>
+          <h3>Call or request a quote</h3>
+          <p>Tell us what you're seeing — dirty glass, clogged gutters, mossy roof — and where you're located.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-num">02</span>
+          <h3>Get a straight price</h3>
+          <p>We quote the job up front based on your home, with no add-ons that show up later.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-num">03</span>
+          <h3>Watch it get done right</h3>
+          <p>Our crew handles everything on-site, cleans up after itself, and shows you the result before we leave.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE AREA -->
+  <section id="area">
+    <div class="wrap area-layout">
+      <div>
+        <span class="eyebrow">Where we work</span>
+        <h2 style="font-size:clamp(26px,3vw,36px); margin-top:14px; margin-bottom:20px;">Based in Isanti, serving Isanti County, Anoka County, and surrounding areas.</h2>
+        <p style="color:var(--text-soft); font-size:15.5px; line-height:1.7; margin-bottom:26px;">If your home is inside Isanti County, Anoka County, or nearby communities, we can likely schedule service in your area. Reach out to see if your address is on today’s route.</p>
+        <div class="chip-cloud">
+          <span class="chip home">Isanti (home base)</span>
+          <span class="chip">Anoka County</span>
+          <span class="chip">Surrounding areas</span>
+        </div>
+      </div>
+      <div class="area-visual">
+        <svg viewBox="0 0 300 300" width="100%" height="100%" role="img" aria-label="Map showing Isanti in the service area">
+          <defs>
+            <linearGradient id="mapGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="var(--paper)" />
+              <stop offset="100%" stop-color="var(--paper-deep)" />
+            </linearGradient>
+          </defs>
+          <circle cx="150" cy="150" r="140" fill="url(#mapGrad)" stroke="var(--teal)" stroke-width="2"/>
+
+          <path d="M50 70 C80 60, 110 90, 140 80 S210 90, 250 70" fill="none" stroke="rgba(13,43,74,0.14)" stroke-width="8" stroke-linecap="round"/>
+          <path d="M60 220 C95 210, 130 180, 170 190 S220 215, 240 230" fill="none" stroke="rgba(13,43,74,0.14)" stroke-width="8" stroke-linecap="round"/>
+          <path d="M95 50 L115 110 L80 130" fill="none" stroke="rgba(13,43,74,0.2)" stroke-width="6" stroke-linecap="round"/>
+          <path d="M180 65 L190 145 L160 155" fill="none" stroke="rgba(13,43,74,0.2)" stroke-width="6" stroke-linecap="round"/>
+          <path d="M135 30 L145 90 L175 80" fill="none" stroke="rgba(13,43,74,0.2)" stroke-width="6" stroke-linecap="round"/>
+
+          <circle cx="150" cy="150" r="18" fill="var(--gold)" opacity="0.95"/>
+          <circle cx="150" cy="150" r="11" fill="var(--ink)"/>
+          <path d="M150 165 L150 220" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M150 220 C148 228, 142 230, 140 240 A12 12 0 0 0 160 240 C158 230, 152 228, 150 220 Z" fill="var(--ink)"/>
+
+          <text x="150" y="170" text-anchor="middle" font-family="var(--body)" font-size="14" font-weight="700" fill="var(--white)">Isanti</text>
+          <text x="150" y="190" text-anchor="middle" font-family="var(--body)" font-size="12" fill="var(--ink-soft)">Service hub</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <span class="brand">All Metro TrueView</span>
+    <ul class="footer-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#area">Service area</a></li>
+      <li><a href="mailto:allmetrotrueview@outlook.com">Email Us</a></li>
+      <li><a href="tel:+17633029712">(763) 302-9712</a></li>
+    </ul>
+    <span>&copy; 2026 All Metro TrueView. Isanti &amp; Anoka County, MN.</span>
+  </div>
+</footer>
+
+<div class="sticky-call">
+  <a href="tel:+17633029712">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.78.6 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.45a2 2 0 0 1 2.11-.45c.85.28 1.73.48 2.63.6A2 2 0 0 1 22 16.92z"/></svg>
+    Call Now
+  </a>
+</div>
+
+</body>
+</html>
